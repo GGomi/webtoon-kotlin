@@ -1,0 +1,6 @@
+client:
+  daum:
+    url: http://webtoon.daum.net/data/pc/webtoon/list_serialized/
+    page: /webtoon/view/
+  naver:
+    url: https://comic.naver.com/webtoon/weekday.nhn

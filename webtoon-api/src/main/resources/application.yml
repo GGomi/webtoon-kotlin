@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: local
+  pid:
+    file: logs/commitmon-api.pid
+
+server:
+  port: 5000
