@@ -1,5 +1,4 @@
 .gradle
-/build/
 build
 node_modules
 package-lock.json
@@ -15,7 +14,7 @@ package-lock.json
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
