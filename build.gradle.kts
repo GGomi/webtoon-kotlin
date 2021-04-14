@@ -34,15 +34,6 @@ allprojects {
         }
     }
 
-    tasks.withType<Test> {
-        useJUnitPlatform()
-    }
-
-    tasks.register<Node>() {
-        workingDir = file("${project.projectDir}/frontend/webtoon")
-        args = {"install"}
-    }
-
 }
 
 subprojects {
@@ -64,13 +55,6 @@ subprojects {
 
 allOpen {
     annotation("javax.persistence.Entity")
-}
-
-node {
-    version = '12.6.0'
-    download = true
-    workDir = file("${project.buildDir}/nodejs")
-    npmWorkDir = file("${project.buildDir}/npm")
 }
 
 /*
