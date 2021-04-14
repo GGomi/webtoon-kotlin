@@ -1,8 +1,8 @@
 spring:
   profiles:
-    active: local
+    active: develop
   pid:
-    file: logs/commitmon-api.pid
+    file: logs/webtoon-api.pid
 
 server:
   port: 5000
