@@ -13,7 +13,6 @@ import javax.annotation.PostConstruct
 @SpringBootApplication(
     scanBasePackages = [
         "com.webtoon.api",
-        "com.webtoon.crawler",
         "com.webtoon.domain"
     ]
 )
