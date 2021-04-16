@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: develop
+  jmx:
+    enabled: true
   pid:
     file: logs/webtoon-api.pid
 

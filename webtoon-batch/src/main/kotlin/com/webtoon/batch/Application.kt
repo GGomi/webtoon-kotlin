@@ -2,6 +2,8 @@ package com.webtoon.batch
 
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.builder.SpringApplicationBuilder
+import org.springframework.boot.context.ApplicationPidFileWriter
 import org.springframework.boot.context.event.ApplicationReadyEvent
 import org.springframework.boot.info.BuildProperties
 import org.springframework.boot.runApplication
@@ -35,5 +37,7 @@ class Application(
 }
 
 fun main(args: Array<String>) {
-    runApplication<Application>(*args)
+    SpringApplicationBuilder(Application::class.java)
+        .listeners(ApplicationPidFileWriter())
+        .run(*args)
 }

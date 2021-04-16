@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+    <springProfile name="local,develop">
+        <include resource="logback-base.xml"/>
+        <root level="DEBUG">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="error_log"/>
+            <appender-ref ref="info_log"/>
+        </root>
+
+        <logger name="com.webtoon" level="INFO">
+            <appender-ref ref="application_log"/>
+        </logger>
+
+        <logger name="executeTime_log" level="INFO" additivity="false">
+            <appender-ref ref="executeTime_log"/>
+        </logger>
+        <logger name="slowProcess_log" level="INFO" additivity="false">
+            <appender-ref ref="slowProcess_log"/>
+        </logger>
+
+    </springProfile>
+
+    <springProfile name="staging">
+        <include resource="logback-base.xml"/>
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="error_log"/>
+            <appender-ref ref="info_log"/>
+        </root>
+
+        <logger name="com.webtoon" level="INFO">
+            <appender-ref ref="application_log"/>
+        </logger>
+
+        <logger name="executeTime_log" level="INFO" additivity="false">
+            <appender-ref ref="executeTime_log"/>
+        </logger>
+        <logger name="slowProcess_log" level="INFO" additivity="false">
+            <appender-ref ref="slowProcess_log"/>
+        </logger>
+
+    </springProfile>
+
+    <springProfile name="production">
+        <include resource="logback-base.xml"/>
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+            <appender-ref ref="error_log"/>
+            <appender-ref ref="info_log"/>
+        </root>
+
+        <logger name="com.webtoon" level="INFO">
+            <appender-ref ref="application_log"/>
+        </logger>
+
+        <logger name="executeTime_log" level="INFO" additivity="false">
+            <appender-ref ref="executeTime_log"/>
+        </logger>
+        <logger name="slowProcess_log" level="INFO" additivity="false">
+            <appender-ref ref="slowProcess_log"/>
+        </logger>
+
+    </springProfile>
+
+</configuration>

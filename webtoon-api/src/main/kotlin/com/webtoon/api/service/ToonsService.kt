@@ -1,7 +1,6 @@
 package com.webtoon.api.service
 
-import com.webtoon.api.dto.ToonItem
-import com.webtoon.domain.entity.Toon
+import com.webtoon.api.rest.dto.ToonItem
 import com.webtoon.domain.repository.ToonRepository
 import org.springframework.stereotype.Service
 

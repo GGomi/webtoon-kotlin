@@ -1,4 +1,4 @@
-package com.webtoon.api.dto
+package com.webtoon.api.rest.dto
 
 import com.webtoon.domain.exception.BusinessException
 import com.webtoon.domain.exception.ErrorCode

@@ -20,7 +20,7 @@ plugins {
 allprojects {
 
     group = "com.mark"
-    version = "0.1"
+    version = "staging"
 
     tasks.withType<JavaCompile> {
         sourceCompatibility = "1.8"
@@ -56,40 +56,3 @@ subprojects {
 allOpen {
     annotation("javax.persistence.Entity")
 }
-
-/*
-def webappDir = "$projectDir/frontend/webtoon"
-
-node {
-    version = '12.6.0'
-    download = true
-    workDir = file("${project.buildDir}/nodejs")
-    npmWorkDir = file("${project.buildDir}/npm")
-}
-
-task appNpmInstall(type: NpmTask) {
-    workingDir = file("${project.projectDir}/frontend/webtoon")
-    args = ["install"]
-}
-
-task yarnBuild(type: YarnTask) {
-    workingDir = file("${project.projectDir}/frontend/webtoon")
-    args = ['build']
-}
-
-task copyWebApp(type: Copy) {
-    from "frontend/webtoon/build"
-    into 'build/resources/main/static/.'
-}
-
-jacocoTestReport {
-    reports {
-        xml.enabled = true // coveralls plugin depends on xml format report
-        html.enabled = true
-    }
-}
-
-yarnBuild.dependsOn appNpmInstall
-copyWebApp.dependsOn yarnBuild
-compileJava.dependsOn copyWebApp
- */

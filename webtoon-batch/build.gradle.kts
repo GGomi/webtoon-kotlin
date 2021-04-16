@@ -1,5 +1,6 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
+object DependencyVersions {
+    const val SWAGGER_VERSION = "2.9.2"
+}
 
 dependencies {
     implementation(project(":webtoon-domain"))
@@ -9,6 +10,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("org.jsoup:jsoup:1.11.3")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    implementation("io.springfox:springfox-swagger2:${DependencyVersions.SWAGGER_VERSION}")
+    implementation("io.springfox:springfox-swagger-ui:${DependencyVersions.SWAGGER_VERSION}")
 
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

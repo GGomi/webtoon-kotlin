@@ -1,4 +1,4 @@
-package com.webtoon.api.controller
+package com.webtoon.api.rest.controller
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect
 import io.swagger.annotations.ApiModel

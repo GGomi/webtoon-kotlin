@@ -11,7 +11,7 @@ class WebtoonCrawlerScheduler(
     private val daumToonCrawlService: DaumToonCrawlService
 ) {
 
-    @Scheduled(cron = "* * 9 * * *")
+    @Scheduled(cron = "* 1 0 * * *")
     fun crawlToons() {
         naverToonCrawl.naverToonCrawl()
         daumToonCrawlService.daumToonCrawl()

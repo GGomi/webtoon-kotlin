@@ -27,3 +27,4 @@ package-lock.json
 /nbdist/
 /.nb-gradle/
 yarn.lock
+/webtoon-domain/src/main/resources/properties/database/webtoon-database-production.properties

@@ -1,4 +1,4 @@
-package com.webtoon.api.dto
+package com.webtoon.api.rest.dto
 
 class ToonItem(
     val toonName: String,
