@@ -14,7 +14,7 @@ open class RestDaumClient(client: WebClient): DaumClient, RestClient(client) {
         val timestamp = Instant.now().epochSecond
 
         return client.get()
-            .uri(DaumConstant.DAUM_WEBTOON_END_POINT + day.toLowerCase() + "?$timestamp")
+            .uri(day.toLowerCase() + "?timeStamp=$timestamp")
             .header("TIARA", "wSiyD.iDerurilteRXllei-OguUZZr5EkyiZIJWq1uZhINVhCsPLT_EPdFwcK29KzOW1xpdGqgudhvl.LSHuJVBvrnlmZFo7")
             .accept(MediaType.APPLICATION_JSON)
             .request()
