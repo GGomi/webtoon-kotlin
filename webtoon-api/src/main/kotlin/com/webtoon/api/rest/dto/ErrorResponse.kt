@@ -1,6 +1,6 @@
 package com.webtoon.api.rest.dto
 
-import com.webtoon.domain.exception.BusinessException
+import com.webtoon.domain.exception.WebtoonException
 import com.webtoon.domain.exception.ErrorCode
 import org.springframework.validation.BindingResult
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException
@@ -22,7 +22,7 @@ class ErrorResponse private constructor(
         errors = FieldError.ofList(e)
     }
 
-    constructor(code: ErrorCode, e: BusinessException) : this(code, e.message ?: code.message) {
+    constructor(code: ErrorCode, e: WebtoonException) : this(code, e.message ?: code.message) {
         errors = FieldError.ofEmptyList()
     }
 

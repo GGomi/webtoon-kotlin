@@ -3,7 +3,7 @@ package com.webtoon.batch.service
 import com.webtoon.client.daum.DaumClient
 import com.webtoon.domain.entity.Toon
 import com.webtoon.domain.entity.enum.ToonProvider
-import com.webtoon.domain.exception.BusinessException
+import com.webtoon.domain.exception.WebtoonException
 import com.webtoon.domain.exception.ErrorCode
 import com.webtoon.domain.repository.ToonRepository
 import org.springframework.beans.factory.annotation.Value
@@ -31,7 +31,7 @@ class DaumToonCrawlService(
 
         day.map {
             val daumClientResponse =
-                daumClient.getDaumToonList(it).block() ?: throw BusinessException(ErrorCode.DATA_NOT_FOUND)
+                daumClient.getDaumToonList(it).block() ?: throw WebtoonException(ErrorCode.DATA_NOT_FOUND)
 
             if (daumClientResponse.data.isNotEmpty()) {
                 daumClientResponse.data.map { datum ->

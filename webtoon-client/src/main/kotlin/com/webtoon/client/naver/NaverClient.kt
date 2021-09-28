@@ -3,7 +3,7 @@ package com.webtoon.client.naver
 import com.webtoon.client.naver.constant.NaverConstant.NAVER_WEBTOON_LIST_TAG
 import com.webtoon.domain.entity.Toon
 import com.webtoon.domain.entity.enum.ToonProvider
-import com.webtoon.domain.exception.BusinessException
+import com.webtoon.domain.exception.WebtoonException
 import com.webtoon.domain.exception.ErrorCode
 import org.jsoup.Jsoup
 import org.slf4j.LoggerFactory
@@ -59,7 +59,7 @@ class NaverClient(
                 val src = img.attr("src")
                 val name = img.attr("title")
                 var code = ""
-                var serial = map[dayInfo] ?: throw BusinessException(ErrorCode.DATA_NOT_FOUND)
+                var serial = map[dayInfo] ?: throw WebtoonException(ErrorCode.DATA_NOT_FOUND)
                 val p = Pattern.compile("(\\d+\\d)")
                 val m = p.matcher(href)
 
